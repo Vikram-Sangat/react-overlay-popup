@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
 
 var Overlay = React.createClass({
   propTypes: {
-    children: React.PropTypes.node
+    children: PropTypes.node
   },
 
   componentDidMount: function () {

@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import invar from 'invariant'
+import PropTypes from 'prop-types'
 import Overlay from './Overlay'
 
 var _strategies = { }
@@ -74,12 +75,12 @@ _strategies['right bottom'] = createStrategy(1, 0, 1, 1, 1, 0)
 
 var Popup = React.createClass({
   propTypes: {
-    strategy: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.func
+    strategy: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.func
     ]),
-    children: React.PropTypes.node,
-    gap: React.PropTypes.number
+    children: PropTypes.node,
+    gap: PropTypes.number
   },
 
   componentDidMount: function () {
